@@ -2,8 +2,8 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { NextUIProvider } from "@nextui-org/react";
 import Nav from './components/Nav';
 import Home from './pages/Home';
-import Test from './pages/Test';
 import Projects from './pages/Projects';
+import Education from './pages/Education';
 
 function App() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/test' element={<Test />} />
+          <Route path='/education' element={<Education />} />
           <Route path='/projects' element={<Projects />} />
         </Routes>
       </div>
