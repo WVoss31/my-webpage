@@ -7,11 +7,14 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Button,
+  Divider,
 } from "@nextui-org/react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import CodeSquare from "../assets/code-square.svg"
-
+import { useTheme } from "next-themes";
+import { faTerminal, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -24,6 +27,7 @@ const navItems = [
 export default function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const location = useLocation();
   const currentPath = location.pathname;
@@ -49,7 +53,7 @@ export default function MyNavbar() {
       <NavbarContent className="hidden flex">
         <NavbarBrand>
           <Link color="foreground" href="/">
-            <img src={CodeSquare} alt="Terminal Logo" className="h-8" />
+            <FontAwesomeIcon icon={faTerminal} />
             <p className="font-bold text-inherit ml-2">Walker Voss</p>
           </Link>
         </NavbarBrand>
@@ -76,19 +80,50 @@ export default function MyNavbar() {
                   </Link>
                 </NavbarMenuItem>
               ))}
+              <Divider orientation="horizontal" />
+              <NavbarMenuItem>
+                <Button
+                  color={theme === "dark" ? "default" : "secondary"}
+                  variant="ghost"
+                  onClick={() =>
+                    theme === "dark" ? setTheme("light") : setTheme("dark")
+                  }
+                >
+                  <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
+                  <span className="ml-2">
+                    {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                  </span>
+                </Button>
+              </NavbarMenuItem>
             </NavbarMenu>
           </>
         ) : (
-          navItems.map((item) => (
-            <NavbarItem key={item.path} isActive={currentPath === item.path}>
-              <Link
-                color={currentPath === item.path ? undefined : "foreground"}
-                href={item.path}
+          <>
+            {navItems.map((item) => (
+              <NavbarItem key={item.path} isActive={currentPath === item.path}>
+                <Link
+                  color={currentPath === item.path ? undefined : "foreground"}
+                  href={item.path}
+                >
+                  {item.name}
+                </Link>
+              </NavbarItem>
+            ))}
+
+            <Divider orientation="vertical" />
+            <NavbarItem>
+              <Button
+                isIconOnly
+                color="default"
+                variant="light"
+                onClick={() =>
+                  theme === "dark" ? setTheme("light") : setTheme("dark")
+                }
               >
-                {item.name}
-              </Link>
+                <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
+              </Button>
             </NavbarItem>
-          ))
+          </>
         )}
       </NavbarContent>
     </Navbar>
