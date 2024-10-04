@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero title="Welcome to My Website" subtitle="I make cool stuff" action="About Me" />
+      <Hero title="Under Active Development" subtitle="Please check back later" action="About Me" />
       {/* Beginning of Animated Cover Page */}
         <div className="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
           <div ref={ref} className={`text-center transition-opacity ease-in duration-700 ${
