@@ -16,8 +16,8 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/my-webpage/education" element={<Education />} />
+            <Route path="/my-webpage/projects" element={<Projects />} />
           </Routes>
         </div>
       </ThemeProvider>
