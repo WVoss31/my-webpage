@@ -17,7 +17,7 @@ import { faTerminal, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navItems = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "/my-webpage" },
   { name: "Work Experience", path: "/my-webpage/career" },
   { name: "Projects", path: "/my-webpage/projects" },
   { name: "Education", path: "/my-webpage/education" },
