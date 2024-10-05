@@ -5,7 +5,7 @@ const Hero = ({title, subtitle, action}) => {
   return (
     <div
         className="h-screen bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: "url(/hero.jpg)" }}
+        style={{ backgroundImage: "/hero.jpg" }}
       >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-4">{title}</h1>
