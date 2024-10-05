@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigateFromYourRouter } from "react-router-dom";
+import { Routes, Route, useNavigate, useHref } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
@@ -7,9 +7,9 @@ import Education from "./pages/Education";
 import { ThemeProvider } from "next-themes";
 
 function App() {
-  const navigate = useNavigateFromYourRouter();
+  const navigate = useNavigate();
   return (
-    <NextUIProvider navigate={navigate}>
+    <NextUIProvider navigate={navigate} useHref={useHref}>
       <ThemeProvider attribute="class" defaultTheme="dark">
         <div>
           <Nav />
