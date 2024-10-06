@@ -18,10 +18,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navItems = [
   { name: "Home", path: "/my-webpage" },
-  { name: "Work Experience", path: "/my-webpage/career" },
+  // { name: "Work Experience", path: "/my-webpage/career" },
   { name: "Projects", path: "/my-webpage/projects" },
   { name: "Education", path: "/my-webpage/education" },
-  { name: "About Me", path: "/my-webpage/about" },
+  // { name: "About Me", path: "/my-webpage/about" },
 ];
 
 export default function MyNavbar() {
