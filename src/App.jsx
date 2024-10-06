@@ -9,8 +9,9 @@ import { ThemeProvider } from "next-themes";
 function App() {
   const navigate = useNavigate();
   const href = useHref();
+  console.log(href)
   return (
-    <NextUIProvider navigate={navigate} useHref={href}>
+    <NextUIProvider navigate={navigate} useHref={navigate}>
       <ThemeProvider attribute="class" defaultTheme="dark">
         <div>
           <Nav />
