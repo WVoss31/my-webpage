@@ -52,7 +52,7 @@ export default function MyNavbar() {
     >
       <NavbarContent className="hidden flex">
         <NavbarBrand>
-          <Link color="foreground" href="/">
+          <Link color="foreground" href="/my-webpage">
             <FontAwesomeIcon icon={faTerminal} />
             <p className="font-bold text-inherit ml-2">Walker Voss</p>
           </Link>
