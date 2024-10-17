@@ -50,7 +50,7 @@ export default function MyNavbar() {
       maxWidth="full"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="hidden flex">
+      <NavbarContent className="flex">
         <NavbarBrand>
           <Link color="foreground" href="/my-webpage">
             <FontAwesomeIcon icon={faTerminal} />
@@ -58,7 +58,7 @@ export default function MyNavbar() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden flex gap-4" justify="end">
+      <NavbarContent className="flex gap-4" justify="end">
         {isMobile || window.innerWidth < 720 ? (
           <>
             <NavbarMenuToggle

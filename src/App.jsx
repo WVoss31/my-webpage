@@ -8,20 +8,18 @@ import { ThemeProvider } from "next-themes";
 
 function App() {
   const navigate = useNavigate();
-  const href = useHref();
-  console.log(navigate)
   return (
-    <NextUIProvider navigate={href} useHref={href}>
+    <NextUIProvider navigate={navigate} useHref={useHref}>
       <ThemeProvider attribute="class" defaultTheme="dark">
         <div>
           <Nav />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
         </div>
       </ThemeProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
     </NextUIProvider>
   );
 }
