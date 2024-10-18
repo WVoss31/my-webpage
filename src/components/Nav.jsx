@@ -103,7 +103,7 @@ export default function MyNavbar() {
               <NavbarItem key={item.path} isActive={currentPath === item.path}>
                 <Link
                   color={currentPath === item.path ? undefined : "foreground"}
-                  href={item.path}
+                  href="/my-webpage/education"
                 >
                   {item.name}
                 </Link>

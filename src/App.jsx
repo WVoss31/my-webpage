@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/my-webpage/education" element={<Education />} />
-        <Route path="my-webpage/projects" element={<Projects />} />
+        <Route path="/my-webpage/projects" element={<Projects />} />
       </Routes>
     </NextUIProvider>
   );
