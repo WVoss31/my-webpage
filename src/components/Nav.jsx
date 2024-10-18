@@ -19,8 +19,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const navItems = [
   { name: "Home", path: "/my-webpage" },
   // { name: "Work Experience", path: "/my-webpage/career" },
-  { name: "Projects", path: "/projects" },
-  { name: "Education", path: "/education" },
+  { name: "Projects", path: "my-webpage/projects" },
+  { name: "Education", path: "my-webpage/education" },
   // { name: "About Me", path: "/my-webpage/about" },
 ];
 
